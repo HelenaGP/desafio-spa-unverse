@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: clamp(55%, 1% + 1.5vw, 62.5%);
+}
+
+body {
+  background-color: black;
+  font-family: Roboto, sans-serif; 
+  font-size: 2.4rem;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "A"
+  "B";
+  grid-template-rows: 12.2rem auto;
+}
+
+nav {
+  display: flex;
+  gap: 3.2rem;
+  margin: 4rem 7.2rem;
+  align-items: center;
+  grid-area: A;
+}
+
+a {
+  color: #8D8D99;
+  text-decoration: none;
+  font-weight: 400; 
+}
+
+a img {
+  max-width: 4.2rem;
+  pointer-events: none;
+}
+
+a:hover, a:focus-visible, a:active {
+  color: white;
+  font-weight: 700;
+  transition: all 300ms;
+}
+
+a:hover img {
+  transform: scale(1.05);
+  transition: transform 300ms;
+}
+
+#app {
+  margin: 6.3rem 10.2rem ;
+  grid-area: B;
+  overflow: auto;
+}
+
+h1 {
+  color: #E1E1E6;
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 1.6rem;
+}
+
+button {
+  color: white;
+  font-family: Roboto;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1.2rem 3.2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.8rem;
+
+  border: 2px solid #FFF; 
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+button:hover {
+  color: #02799D; 
+  
+  background: #FFF; 
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p {
+  color: #E1E1E6;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+
+  max-width: 64.8rem;
+}
+
+#error {
+  display: flex;
+  align-items: center;
+}
+
+#error h1 {
+  font-size: 6rem;
+}
+
+#error h2 {
+  color: #8D8D99;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 1.6rem;
+}
+
+#error p {
+  color: #8D8D99;
+}
+
+#error img {
+  max-width: 35%;
+}
+
+@media (max-width: 600px) {
+  nav {
+    margin: 0 auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  #app {
+    margin: 6.3rem 6rem ;
+  }
+
+  #error img {
+    display: none;
+  }
+}
+
+.selected {
+  color: white;
+  font-weight: 700;
+}
+
+.home {
+  background-image: url(./assets/bg-home.png);
+  background-size: cover;
+}
+
+.universe {
+  background-image: url(./assets/bg-universe.png);
+  background-size: cover;
+}
+
+.exploration {
+  background-image: url(./assets/bg-exploration.png);
+  background-size: cover;
+}
