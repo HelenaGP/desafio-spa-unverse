@@ -47,5 +47,4 @@ export class Router {
     const newSelected = document.getElementById(IDname)
     newSelected.classList.add('selected')
   }
-
 }
